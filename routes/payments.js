@@ -11,7 +11,7 @@ const stripe = stripe(process.env.STRIPE_SECRET);
 router.post("/payment", async (req, res) => {
   try {
     const response = await stripe.charges.create({
-      amount: (req.fields.amount * 100).toFixed(0),
+      amount: (req.fields.amount * 100).toFixed(),
       currency: "eur",
       description: `Objet acheté : ${req.fields.title}`,
       source: req.fields.token, //Token transmis par Stripe
