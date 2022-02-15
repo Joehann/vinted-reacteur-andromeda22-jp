@@ -21,6 +21,8 @@ const userRoutes = require("./routes/users");
 app.use(userRoutes);
 const offerRoutes = require("./routes/offers");
 app.use(offerRoutes);
+const paymentRoutes = require("./routes/payments");
+app.use(paymentRoutes);
 
 app.get("/", (req, res) => {
   try {
