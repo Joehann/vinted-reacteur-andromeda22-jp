@@ -1,5 +1,3 @@
-//Utilisation du back du Reacteur. Code non testé pour le moment.
-
 const express = require("express");
 const router = express.Router();
 const stripe = require("stripe");

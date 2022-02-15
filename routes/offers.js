@@ -29,7 +29,7 @@ router.post("/offer/publish", isAuthenticated, async (req, res) => {
     return;
   }
   if (req.fields.description.length > 500) {
-    res.status(400).json("La description ne doit pas dépasser 50 caractères");
+    res.status(400).json("La description ne doit pas dépasser 500 caractères");
     return;
   }
   if (req.fields.price > 100000) {
